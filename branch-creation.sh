@@ -7,7 +7,7 @@ git branch -a
 #     echo "no need to create a new branch"
 # else
 #     echo "need to create new branch"
-#     git branch develop-starter-code
+#     git branch develop-starter-code 
 # fi
 
 git checkout -b develop-starter-code
