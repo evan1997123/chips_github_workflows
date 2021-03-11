@@ -4,7 +4,9 @@ source ./.github/CHIPS-config.sh
 
 if ! [[ `git subtree pull --prefix .github/workflows/ https://github.com/evan1997123/chips_github_workflows.git master --squash 2>&1` = *"Subtree is already at commit"* ]]; then
     echo "need to pull "
+    git subtree pull --prefix .github/workflows/ https://github.com/evan1997123/chips_github_workflows.git master --squash 
     git status
+    ls -a
     git push origin develop
     exit
 fi
