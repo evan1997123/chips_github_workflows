@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./.github/CHIPS-config.sh
-
+git remote -v
 if ! [[ `git -c user.name="GitHub Actions" -c user.email="actions@github.com" subtree pull --prefix .github/workflows/ https://github.com/evan1997123/chips_github_workflows.git master --squash 2>&1` = *"Subtree is already at commit"* ]]; then
     echo "need to pull   "
     git -c user.name="GitHub Actions" -c user.email="actions@github.com" subtree pull --prefix .github/workflows/ https://github.com/evan1997123/chips_github_workflows.git master --squash 
