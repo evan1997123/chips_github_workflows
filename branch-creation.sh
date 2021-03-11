@@ -14,6 +14,13 @@ git checkout develop-starter-code
 
 python3 ./.github/workflows/evaluate-hierarchy.py ./starter-code/build-starter-code.json
 
+#https://unix.stackexchange.com/questions/422392/delete-all-folders-inside-a-folder-except-one-with-specific-name
+
+# find ./myfolder -mindepth 1 ! -regex '^./myfolder/test2\(/.*\)?' -delete
+echo "ls pls"
+ls -A
+
+
 git add -A
 
 git -c user.name="GitHub Actions" -c user.email="actions@github.com" commit -m "${commit_message}" --author="$CURRENT_USER <$CURRENT_USER@users.noreply.github.com>"
