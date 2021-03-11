@@ -6,7 +6,7 @@ import shutil
 import errno
 import sys
 import re
-import subprocesses
+import subprocess
 
 # https://stackoverflow.com/questions/1868714/how-do-i-copy-an-entire-directory-of-files-into-an-existing-directory-using-pyth
 
@@ -33,6 +33,7 @@ def removeFileOrDirectory(destinationPath):
 
 def createFoldersAndFiles(path, data):
     for folderOrFilename, obj in data.items():
+        print(folderOrFilename)
         destination = str(folderOrFilename)
         destinationPath = os.path.join(path, destination)
 
