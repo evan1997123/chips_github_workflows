@@ -12,7 +12,7 @@ git branch -a
 if ! [[`git subtree pull --prefix .github/workflows/ https://github.com/evan1997123/chips_github_workflows.git master --squash -m \"Pulling changes from upstream github workflow repo\" 2>&1`= *Already up to date* ]]; then
     echo "need to pull"
     git push origin develop
-    exit
+    return
 fi
 
 
